@@ -1,0 +1,12 @@
+import React from 'react'
+
+const Menu = (props) => {
+  return (
+    <div>
+        <h1>{props.menu}</h1>
+        <p>{props.price}</p>
+    </div>
+  )
+}
+
+export default Menu
