@@ -11,11 +11,13 @@ import Ex07 from './example/Ex07'
 import Ex08 from './example/Ex08'
 import Ex09 from './example/Ex09'
 import ExDiceGame from './example/ExDiceGame'
+import Ex10 from './example/Ex10'
+import Ex11 from './example/Ex11'
 
 
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
-    <ExDiceGame/>
+    <Ex07/>
     // </StrictMode>,
 )

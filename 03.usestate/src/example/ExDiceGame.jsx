@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const ExDiceGame = () => {
 
@@ -12,7 +12,7 @@ const ExDiceGame = () => {
     const [comNum, setComNum] = useState(0);
     const [userScore, setUserScore] = useState(0);
     const [comScore, setComScore] = useState(0);
-    // const [result, setResult] = useState('');
+    const [result, setResult] = useState('');
 
     
 
@@ -31,6 +31,16 @@ const ExDiceGame = () => {
     }
     
 
+    useEffect(() => {
+      if (userScore === 10){
+        setResult('USER 승리!')
+        alert('게임이 종료 되었습니다.')
+      }
+      else if (comScore === 10){
+        setResult('COM 승리!')
+        alert('게임이 종료 되었습니다.')
+      }
+    }, [userScore, comScore])
 
   return (
     <div>
@@ -46,7 +56,7 @@ const ExDiceGame = () => {
         <h1>User Score : {userScore}</h1>
       </div>
     
-      <h1>결과 : {userScore === 10 ? 'USER 승리!': comScore === 10 ? 'COM 승리!': ''}</h1>
+      <h1>결과 : {result}</h1>
     </div>
   )
 }
