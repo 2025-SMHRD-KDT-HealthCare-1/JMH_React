@@ -8,8 +8,8 @@ import Login from './component/Login'
 import Join from './component/Join'
 
 function App() {
-  
 
+  
   return (
     <>
       <Routes>
